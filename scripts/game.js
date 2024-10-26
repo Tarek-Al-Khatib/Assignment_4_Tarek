@@ -76,6 +76,7 @@ displayWord();
 function letterClick(letter) {
   var clickedLetter = [...letters].find((t) => t.innerText == letter);
   console.log(clickedLetter.innerHTML);
+  clickedLetter.classList.add("pressed");
 
   if (wordGame.includes(clickedLetter.innerHTML.toLowerCase())) {
     updateCorrectGuesses(clickedLetter.innerHTML.toLowerCase());
